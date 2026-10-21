@@ -1,0 +1,372 @@
+
+/* ===== Pakistan | Where Nature Meets Peace ===== */
+
+:root {
+    --forest: #13332a;
+    --moss: #527C68;
+    --sage: #A8BDA0;
+    --sand: #F3EBDD;
+    --gold: #C6A56B;
+    --white: #FFFEFA;
+    --muted: #69796E;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html 
+{
+    scroll-behavior: smooth;
+}
+
+body 
+{
+    background-color: var(--sand);
+    color: var(--forest);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+}
+
+a 
+{
+    text-decoration: none;
+    color: inherit;
+}
+
+img 
+{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Navigation */
+.navbar 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 18px 7%;
+    background-color: var(--forest);
+    color: var(--white);
+}
+.logo 
+{
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--white);
+}
+.logo span 
+{
+    color: var(--gold);
+}
+.navbar nav 
+{
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+.navbar nav a 
+{
+    color: var(--white);
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.navbar nav a:hover 
+{
+    color: var(--gold);
+}
+
+.nav-button,
+.primary-button 
+{
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 5px;
+    background-color: var(--gold);
+    color: var(--forest);
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+.nav-button:hover,
+.primary-button:hover 
+{
+    background-color: var(--white);
+    transform: translateY(-3px);
+}
+
+
+/* Hero Section */
+.hero 
+{
+    position: relative;
+    min-height: 560px;
+    padding: 90px 7%;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(20, 45, 38, 0.90),
+            rgba(20, 45, 38, 0.25)
+        ),
+        url("images/pakistan-hero.jpg");
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+}
+.hero-content {
+    max-width: 700px;
+}
+.eyebrow 
+{
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+.hero h1 
+{
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(42px, 6vw, 76px);
+    line-height: 1.15;
+    margin-bottom: 24px;
+    color: var(--white);
+}
+.hero-description 
+{
+    max-width: 600px;
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: var(--white);
+}
+.hero-label 
+{
+    align-self: flex-end;
+    margin-left: auto;
+    padding: 18px 22px;
+    background: rgba(20, 45, 38, 0.78);
+    border-left: 3px solid var(--gold);
+    border-radius: 4px;
+    color: var(--white);
+}
+.hero-label span 
+{
+    font-size: 24px;
+}
+.hero-label p 
+{
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+
+/* Destinations Section */
+.destinations {
+    padding: 85px 7%;
+    background-color: var(--sand);
+}
+.section-heading 
+{
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 45px;
+}
+.section-heading .eyebrow 
+{
+    color: var(--moss);
+}
+.section-heading h2 
+{
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(30px, 4vw, 44px);
+    line-height: 1.25;
+    margin-bottom: 18px;
+}
+
+.section-heading > p:last-child 
+{
+    color: var(--muted);
+    font-size: 17px;
+}
+
+/* Destination Cards */
+.destination-grid 
+{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+}
+
+.place-card {
+    overflow: hidden;
+    background-color: var(--white);
+    border: 1px solid rgba(82, 124, 104, 0.14);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(20, 45, 38, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.place-card:hover
+{
+    transform: translateY(-7px);
+    box-shadow: 0 14px 30px rgba(20, 45, 38, 0.16);
+}
+.place-card img 
+{
+    height: 240px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+.place-card:hover img 
+{
+    transform: scale(1.04);
+}
+.place-info 
+{
+    padding: 22px;
+}
+.place-info span 
+{
+    display: block;
+    margin-bottom: 8px;
+    color: var(--moss);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.place-info h3 
+{
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 23px;
+    margin-bottom: 8px;
+}
+
+.place-info p 
+{
+    color: var(--muted);
+    font-size: 15px;
+}
+
+/* About Section */
+.about 
+{
+    padding: 85px 7%;
+    background: linear-gradient(135deg, #E1E9DF, var(--sand));
+    text-align: center;
+}
+.about .eyebrow 
+{
+    color: var(--moss);
+    margin-bottom: 18px;
+}
+.about h2 
+{
+    max-width: 800px;
+    margin: 0 auto 22px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(30px, 4vw, 46px);
+    line-height: 1.3;
+    color: var(--forest);
+}
+.about > p:not(.eyebrow) 
+{
+    max-width: 750px;
+    margin: 0 auto 28px;
+    color: var(--muted);
+    font-size: 17px;
+}
+.about-link
+{
+    display: inline-block;
+    color: var(--forest);
+    border: 1px solid var(--moss);
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: 0.3s ease;
+}
+.about-link:hover
+{
+    background-color: var(--forest);
+    color: var(--white);
+}
+
+/* Footer Styles*/
+footer 
+{
+    background-color: var(--forest);
+    color: var(--white);
+    text-align: center;
+    padding: 35px 20px;
+}
+footer .logo 
+
+    display: inline-block;
+    margin-bottom: 12px;
+}
+footer p 
+{
+    margin: 6px 0;
+    font-size: 14px;
+}
+footer .copyright 
+{
+    margin-top: 15px;
+    color: var(--sage);
+    font-size: 13px;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) 
+{
+    .destination-grid 
+    {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .hero-label 
+    {
+        display: none;
+    }
+}
+@media (max-width: 600px) 
+{
+    .navbar 
+    {
+        flex-direction: column;
+    }
+    .navbar nav 
+    {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    .hero 
+    {
+        min-height: 480px;
+        padding: 65px 7%;
+    }
+    .destination-grid 
+    {
+        grid-template-columns: 1fr;
+    }
+    .place-card img 
+    {
+        height: 230px;
+    }
+    .destinations,
+    .about 
+    {
+        padding: 60px 6%;
+    }
+}
